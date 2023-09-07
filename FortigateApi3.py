@@ -67,22 +67,22 @@ class Fortigate:
     # GET_XXX    -->    GET
 
     def ApiGet(self, url):
-        req = self.s.get(self.api_url + url, params={'vdom':self.vdom})
+        req = self.s.get(self.api_url + url, params={'vdom':self.vdom}, verify=False)
         #print '----json', req.json()
         #print '----text', req.text
         #print 'request status:', r.status_code
         return req
 
     def ApiAdd(self, url, data=None):
-        req = self.s.post(self.api_url + url, params={'vdom':self.vdom}, data=repr(data))
+        req = self.s.post(self.api_url + url, params={'vdom':self.vdom}, data=repr(data), verify=False)
         return req.status_code
 
     def ApiDelete(self, url, data=None):
-        req = self.s.delete(self.api_url + url, params={'vdom':self.vdom}, data=repr(data))
+        req = self.s.delete(self.api_url + url, params={'vdom':self.vdom}, data=repr(data), verify=False)
         return req.status_code
 
     def ApiSet(self, url, data=None):
-        req = self.s.put(self.api_url + url, params={'vdom':self.vdom}, data=repr(data))
+        req = self.s.put(self.api_url + url, params={'vdom':self.vdom}, data=repr(data), verify=False)
         return req.status_code
 
     #-----------------------------------------------------------------------------------------        
@@ -137,7 +137,7 @@ class Fortigate:
         -------
         Return the json object
         '''
-        req = self.ApiGet('cmdb/system/vdom/' + name)
+        req = self.ApiGet('cmdb/system/vdom/' + name, verify=False)
         return req.text
 
     def AddVdom(self, name):
