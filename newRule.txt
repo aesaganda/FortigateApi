@@ -1,0 +1,25 @@
+config vdom
+
+edit testvdom
+
+config firewall policy
+
+edit 34
+
+set srcintf "port1"
+
+set dstintf "port2"
+
+set srcaddr "internal-network"
+
+set dstaddr "external-network"
+
+set action accept
+
+set schedule "always"
+
+set service "HTTP"
+
+set logtraffic all
+
+set comments "Allow HTTP traffic from internal to external"
