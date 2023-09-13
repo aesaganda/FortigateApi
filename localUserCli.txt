@@ -2,7 +2,9 @@ config user local
 
 edit aes.test
 
-set password "Test123"
+set type password
+
+set passwd Test123
 
 set two-factor sms
 
