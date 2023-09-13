@@ -3,3 +3,7 @@ config user group
 edit TestGroup
 
 append member TestUser
+
+next
+
+end
