@@ -8,7 +8,7 @@ set passwd Test123
 
 set two-factor sms
 
-set sms-phone 5457834090
+set sms-phone 5451234567
 
 set sms-server custom
 
