@@ -1,8 +1,8 @@
 config user group
 
-edit TestGroup
+edit <grup-adı>
 
-append member TestUser
+append member <kullanıcı-ismi>
 
 next
 
