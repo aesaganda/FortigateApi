@@ -2,7 +2,7 @@ config user group
 
 edit <grup-adı>
 
-append member <kullanıcı-ismi>
+append member <kullanıcı-adı>
 
 next
 
