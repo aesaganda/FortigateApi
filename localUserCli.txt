@@ -1,10 +1,14 @@
+config vdom
+
+edit <vdom-adı>
+
 config user local
 
-edit aes.test
+edit <kullanıcı-adı>
 
 set type password
 
-set passwd Test123
+set passwd <parola>
 
 set two-factor sms
 
